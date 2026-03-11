@@ -1,6 +1,7 @@
 import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Linkedin } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,9 +82,20 @@ const LeadershipSection = ({ className = '' }: LeadershipSectionProps) => {
           <h2 className="font-['Montserrat'] font-bold text-[clamp(28px,2.8vw,44px)] text-white leading-[1.05] mb-3">
             Bhargav
           </h2>
-          <p className="font-['Inter'] text-[15px] text-white/50 mb-8">
-            Founder & CEO, Welerix Holdings
-          </p>
+          <div className="flex items-center gap-4 mb-8">
+            <p className="font-['Inter'] text-[15px] text-white/50">
+              Founder & CEO, Welerix Holdings
+            </p>
+            <a
+              href="https://www.linkedin.com/in/bhargav-ramireddy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-[#D7A04D] transition-colors"
+              aria-label="Bhargav on LinkedIn"
+            >
+              <Linkedin size={18} />
+            </a>
+          </div>
 
           <p className="font-['Inter'] text-[14px] md:text-[15px] leading-[1.7] text-white/60 max-w-[460px]">
             Welerix was founded with a clear thesis: the best businesses of the next decade

@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Mail, Phone, MapPin, ArrowRight, Download, User, Lock } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight, Download, User, Lock, Linkedin } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -280,8 +280,19 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
       {/* Footer */}
       <footer className="relative z-10 mt-20 pt-8 border-t border-white/10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div className="font-['Montserrat'] font-bold text-xl text-white">
-            Welerix
+          <div className="flex items-center gap-4">
+            <span className="font-['Montserrat'] font-bold text-xl text-white">
+              Welerix
+            </span>
+            <a
+              href="https://www.linkedin.com/company/welerix/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white transition-colors"
+              aria-label="Welerix on LinkedIn"
+            >
+              <Linkedin size={18} />
+            </a>
           </div>
           <div className="flex flex-wrap gap-6 md:gap-10">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Sitemap'].map((link) => (
